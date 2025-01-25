@@ -37,7 +37,7 @@ const ProjectCard = ({
       className={`w-2/5 min-w-72 relative group rounded-xl overflow-hidden bg-cover bg-center shadow-lg transition-transform transform hover:scale-105 duration-300 ${
         isVisible ? "animate-popIn" : "opacity-0"
       }`}
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      style={{ backgroundImage: `url(${backgroundImage})` , height:"400px"}}
     >
       <div className="p-4 bg-gradient-to-t from-black via-black/70 to-transparent text-white flex flex-col justify-end h-full group-hover:shadow-xl transition-shadow duration-300">
         <div className="flex gap-2 mb-4 opacity-80 group-hover:opacity-100 transition-opacity duration-300">

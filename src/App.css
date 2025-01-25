@@ -2,95 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root
-{
-  --yellow: #F5C32C;
-    --orange : #FCA61F;
-    --black : #242D49;
-    --gray : #788097;
-    --blueCard : #DDF8FE;
-    --purple: rgb(238 210 255);
-    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
-    --orangeCard: rgba(252, 166, 31, 0.45);
-    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+:root {
+  --yellow: #f5c32c;
+  --orange: #fca61f;
+  --black: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
 }
 
-.App{
-    padding: 0.5rem 3.5rem;
-    overflow: hidden;
-    color: var(--black);    
+/* Tailwind custom animation layers */
+@layer utilities {
+  /* Neon border animation */
+  @keyframes neonBorder {
+    0% {
+      box-shadow: 0 0 10px #ff007c, 0 0 20px #ff007c, 0 0 40px #ff007c,
+        0 0 80px #ff007c;
+    }
+    25% {
+      box-shadow: 0 0 10px #ff6f91, 0 0 20px #ff6f91, 0 0 40px #ff6f91,
+        0 0 80px #ff6f91;
+    }
+    50% {
+      box-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0, 0 0 40px #00fff0,
+        0 0 80px #00fff0;
+    }
+    75% {
+      box-shadow: 0 0 10px #8c00ff, 0 0 20px #8c00ff, 0 0 40px #8c00ff,
+        0 0 80px #8c00ff;
+    }
+    100% {
+      box-shadow: 0 0 10px #ff007c, 0 0 20px #ff007c, 0 0 40px #ff007c,
+        0 0 80px #ff007c;
+    }
+  }
+
+  /* Apply neon border animation to elements */
+  .animate-neon-border {
+    background: transparent;
+    border: 4px solid transparent;
+    border-radius: 50%;
+    animation: neonBorder 3s ease-in-out infinite;
+  }
+
+  /* Glowing effect for Vanta dots */
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 15px 3px rgba(0, 179, 179, 0.7); /* Teal glow */
+    }
+    50% {
+      box-shadow: 0 0 25px 5px rgba(0, 179, 179, 1); /* More intense teal glow */
+    }
+    100% {
+      box-shadow: 0 0 15px 3px rgba(0, 179, 179, 0.7); /* Back to initial glow */
+    }
+  }
+
+  /* Apply the glowing effect to the Vanta dots canvas */
+  #Home canvas {
+    animation: glowing 2s infinite ease-in-out;
+  }
 }
+
+/* Existing styles */
+.App {
+  padding: 0.5rem 3.5rem;
+  overflow: hidden;
+  color: var(--black);
+}
+
 .scrollbar-hide {
   -ms-overflow-style: none;
-  scrollbar-width: none; 
+  scrollbar-width: none;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
-  width: 0; 
+  width: 0;
   height: 0;
-}
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateX(20%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideIn {
-  animation: slideIn 1s ease-out forwards; 
-}
-
-@keyframes backgroundAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-.animate-backgroundAnimation {
-  animation: backgroundAnimation 10s ease-in-out infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateX(-20px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes popIn {
-  0% {
-    transform: scale(0.5) translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1) translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-popIn {
-  animation: popIn 0.4s ease-out forwards;
 }

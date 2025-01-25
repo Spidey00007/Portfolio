@@ -2,17 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaFileAlt } from "react-icons/fa";
-import "../App.css";
+import "../App.css"; // Make sure the CSS file includes the neon border animation
 import DOTS from "vanta/src/vanta.dots";
-import TRUNK from "vanta/src/vanta.trunk";
 
 const Home = () => {
   const [dots, setDots] = useState(null);
-  const [trunk, setTrunk] = useState(null);
-
-  const leftSideRef = useRef(null);
-  const rightSideRef = useRef(null);
-  const profileWrapperRef = useRef(null); // Ref for the wrapper element
+  const profileWrapperRef = useRef(null);
   const mode = useSelector((state) => state.theme.mode);
 
   const textColor = mode === "light" ? "text-gray-900" : "text-white";
@@ -29,38 +24,20 @@ const Home = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0xe33077,
-          backgroundColor: 0xa3f7f7,
-          size: 3.5,
+          color: 0x9933ff, // Teal color for the dots
+          backgroundColor: 0x66ffff, // Dark background for contrast
+          size: 3.0,
           spacing: 20,
           showLines: false,
-        })
-      );
-    }
-
-    if (!trunk && profileWrapperRef.current) {
-      setTrunk(
-        TRUNK({
-          el: "#profile", // Apply effect to the wrapper
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-          color: 0x4dcf45,
-          backgroundColor: 0xa3f7f7,
-          chaos: 1.5,
+          points: 10, // Adding more points for denser dots
         })
       );
     }
 
     return () => {
       if (dots) dots.destroy();
-      if (trunk) trunk.destroy();
     };
-  }, [dots, trunk]);
+  }, [dots]);
 
   return (
     <div
@@ -68,7 +45,6 @@ const Home = () => {
       className={`h-screen flex justify-between items-center px-6 md:px-7 py-5 overflow-hidden relative`}
     >
       <div
-        ref={leftSideRef}
         className={`w-full md:w-3/5 max-w-lg px-6 md:px-12 text-center md:text-left relative z-10`}
       >
         <h1
@@ -118,14 +94,16 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Profile wrapper with Vanta effect */}
       <div
-        id="profile"
-        ref={profileWrapperRef} // Ref for profile wrapper
-        className="overflow-hidden flex justify-center items-center relative w-60 h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-transparent" // Ensure it's circular with transparent border
+        ref={profileWrapperRef}
+        className="relative flex justify-center items-center w-[280px] h-[280px] rounded-full overflow-hidden animate-neon-border"
       >
+        <div
+          className="absolute w-[280px] h-[280px] rounded-full -z-10 left-0 top-0" // Border perfectly aligned
+          id="profile-outline"
+        ></div>
         <img
-          className="w-full h-full rounded-full object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+          className="w-[280px] h-[280px] rounded-full object-cover shadow-lg transition-transform duration-300 hover:scale-105"
           src="img/profile.jpg"
           alt="profile"
         />

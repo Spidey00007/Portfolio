@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import '../App.css'
+import "../App.css";
 const Skills = () => {
   const skillsRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +35,7 @@ const Skills = () => {
         Skills
       </div>
 
-      <div className="relative select-none flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl relative z-10 px-6">
+      <div className="relative select-none flex flex-col md:flex-row items-center justify-between gap-16 w-full max-w-6xl z-10 px-6">
         <div className="top-3 md:w-1/3 space-y-6">
           <h2 className="text-3xl font-bold text-orange-600 leading-tight">
             <span className="text-4xl">M</span>y Tech stack
@@ -45,9 +45,9 @@ const Skills = () => {
             <p className="text-sm">
               My academic background and practical experience have provided me
               with a strong foundation in problem-solving and web development,
-              utilizing technologies such as React.js, Express.js, Node.js, MySQL,
-              MongoDB, and JavaScript. These tools have empowered me to build
-              dynamic and efficient applications, and I am committed to
+              utilizing technologies such as React.js, Express.js, Node.js,
+              MySQL, MongoDB, and JavaScript. These tools have empowered me to
+              build dynamic and efficient applications, and I am committed to
               continuously advancing my skills in this rapidly evolving field.
             </p>
           </div>
