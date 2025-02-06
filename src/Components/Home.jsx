@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useSelector } from "react-redux";
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaFileAlt } from "react-icons/fa";
-import "../App.css"; // Make sure the CSS file includes the neon border animation
+import "../App.css";
 import DOTS from "vanta/src/vanta.dots";
 
 const Home = () => {
@@ -24,12 +24,12 @@ const Home = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x9933ff, // Teal color for the dots
-          backgroundColor: 0x66ffff, // Dark background for contrast
+          color: 0x9933ff,
+          backgroundColor: 0x66ffff,
           size: 3.0,
           spacing: 20,
           showLines: false,
-          points: 10, // Adding more points for denser dots
+          points: 10,
         })
       );
     }
@@ -96,10 +96,10 @@ const Home = () => {
 
       <div
         ref={profileWrapperRef}
-        className="relative flex justify-center items-center w-[280px] h-[280px] rounded-full overflow-hidden animate-neon-border"
+        className="hidden md:flex relative justify-center items-center w-[280px] h-[280px] rounded-full overflow-hidden animate-neon-border"
       >
         <div
-          className="absolute w-[280px] h-[280px] rounded-full -z-10 left-0 top-0" // Border perfectly aligned
+          className="absolute w-[280px] h-[280px] rounded-full -z-10 left-0 top-0"
           id="profile-outline"
         ></div>
         <img
