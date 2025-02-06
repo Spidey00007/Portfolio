@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <div
       id="Home"
-      className={`h-screen flex justify-between items-center px-6 md:px-7 py-5 overflow-hidden relative`}
+      className="h-screen flex justify-between items-center px-6 md:px-7 py-5 overflow-hidden relative"
     >
       <div
         className={`w-full md:w-3/5 max-w-lg px-6 md:px-12 text-center md:text-left relative z-10`}

@@ -27,7 +27,6 @@ const Navbar = () => {
           transition: "all 0.3s ease",
         }}
       >
-        {/* Brand Section */}
         <div
           className="text-3xl font-black flex items-center gap-1 cursor-pointer group relative"
           style={{
@@ -39,7 +38,7 @@ const Navbar = () => {
             borderRadius: "10px",
           }}
         >
-          <a href="#Home" className="flex  gap-3">
+          <a href="#Home" className="flex gap-3">
             <span
               className="text-xl tracking-wide"
               style={{ color: mode === "light" ? "#000" : "#fff" }}
@@ -81,31 +80,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-{/* 
-        <button
-          onClick={() => dispatch(toggleTheme())}
-          style={{
-            background:
-              mode === "light"
-                ? "linear-gradient(to right, #ffa502, #ff6348)"
-                : "linear-gradient(to right, #7474BF, #348AC7)",
-            color: "#fff",
-            border: "none",
-            borderRadius: "45%",
-            width: "40px",
-            height: "40px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-            cursor: "pointer",
-            transition: "all 0.3s ease",
-            marginLeft: "15px",
-            marginRight: "10px",
-          }}
-        >
-          {mode === "light" ? <Sun size={20} /> : <Moon size={20} />}
-        </button> */}
 
         <button
           className="hover:bg-opacity-80 text-xs text-white font-light bg-zinc-600 py-1 px-3 rounded-lg transition-all duration-200 ease-in-out whitespace-nowrap flex items-center gap-2"
@@ -165,16 +139,6 @@ const Navbar = () => {
           hover:scale-105 hover:bg-gray-200 p-2 rounded-lg`}
             onClick={handleMenuClick}
           >
-            <a href="#Education">Education</a>
-          </li>
-          <li
-            className={`cursor-pointer hover:text-red-500 ${
-              mode === "light" ? "text-black" : "text-white"
-            } 
-          transform transition-all duration-300 ease-in-out 
-          hover:scale-105 hover:bg-gray-200 p-2 rounded-lg`}
-            onClick={handleMenuClick}
-          >
             <a href="#skills">Skills</a>
           </li>
           <li
@@ -195,7 +159,7 @@ const Navbar = () => {
           hover:scale-105 hover:bg-gray-200 p-2 rounded-lg`}
             onClick={handleMenuClick}
           >
-            <a href="#cpstat">CP Dashboard</a>
+            <a href="#contacts">Contact</a>
           </li>
         </ul>
       </div>
