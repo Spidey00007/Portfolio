@@ -19,10 +19,7 @@ const Navbar = () => {
       <nav
         className="sticky top-0 z-50 flex items-center justify-between px-4 py-2 shadow-md"
         style={{
-          background:
-            mode === "light"
-              ? "linear-gradient(to right, #FFF5EE , #FFF5EE)"
-              : "linear-gradient(to right, #232526, #414345)",
+          background: "#cafdfe",
           color: mode === "light" ? "#000" : "#fff",
           transition: "all 0.3s ease",
         }}

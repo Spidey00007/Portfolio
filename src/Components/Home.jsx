@@ -4,19 +4,22 @@ import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaFileAlt } from "react-icons/fa";
 import "../App.css";
 import DOTS from "vanta/src/vanta.dots";
+import WAVES from "vanta/src/vanta.waves";
 
 const Home = () => {
   const [dots, setDots] = useState(null);
+  const [waves, setWaves] = useState(null);
   const profileWrapperRef = useRef(null);
   const mode = useSelector((state) => state.theme.mode);
 
   const textColor = mode === "light" ? "text-gray-900" : "text-white";
 
   useEffect(() => {
-    if (!dots) {
-      setDots(
-        DOTS({
+    if (!waves) {
+      setWaves(
+        WAVES({
           el: "#Home",
+          color: 0x148e86,
           mouseControls: true,
           touchControls: true,
           gyroControls: false,
@@ -24,20 +27,45 @@ const Home = () => {
           minWidth: 200.0,
           scale: 1.0,
           scaleMobile: 1.0,
-          color: 0x9933ff,
-          backgroundColor: 0x66ffff,
-          size: 3.0,
-          spacing: 20,
-          showLines: false,
-          points: 10,
+          shininess: 15.0,
+          waveHeight: 20,
+          waveSpeed: 0.9,
+          zoom: 0.6,
         })
       );
     }
 
     return () => {
-      if (dots) dots.destroy();
+      if (waves) waves.destroy();
     };
-  }, [dots]);
+  }, [waves]);
+
+  // useEffect(() => {
+  //   if (!dots) {
+  //     setDots(
+  //       DOTS({
+  //         el: "#Home",
+  //         mouseControls: true,
+  //         touchControls: true,
+  //         gyroControls: false,
+  //         minHeight: 200.0,
+  //         minWidth: 200.0,
+  //         scale: 1.0,
+  //         scaleMobile: 1.0,
+  //         color: 0x9933ff,
+  //         backgroundColor: 0x66ffff,
+  //         size: 3.0,
+  //         spacing: 20,
+  //         showLines: false,
+  //         points: 10,
+  //       })
+  //     );
+  //   }
+
+  //   return () => {
+  //     if (dots) dots.destroy();
+  //   };
+  // }, [dots]);
 
   return (
     <div
