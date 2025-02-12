@@ -2,17 +2,24 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-6">
-      <div className="max-w-7xl mx-auto py-3 px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-  
+    <footer
+      className="text-white py-6"
+      style={{
+        backgroundImage: "url('/footerBg.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="max-w-7xl mx-auto py-3 px-6 flex flex-col md:flex-row md:justify-between items-center space-y-6 md:space-y-0">
+        {/* Heading */}
         <div className="text-center md:text-left">
           <h2 className="text-2xl font-bold tracking-wide">
             Stay Connected 🚀
           </h2>
         </div>
 
-   
-        <div className="flex space-x-8">
+        {/* Social Icons */}
+        <div className="flex space-x-6 flex-wrap justify-center">
           <a
             href="https://github.com/Spidey00007"
             target="_blank"
@@ -49,7 +56,7 @@ const Footer = () => {
           </a>
         </div>
 
-    
+        {/* Footer Text */}
         <div className="text-center md:text-right">
           <p className="text-sm text-gray-400">
             <a
@@ -66,10 +73,9 @@ const Footer = () => {
         </div>
       </div>
 
-   
+      {/* Bottom Border */}
       <div className="border-t border-gray-700 mt-6">
-        <p className=" pt-10">
-        </p>
+        <p className="pt-10"></p>
       </div>
     </footer>
   );
