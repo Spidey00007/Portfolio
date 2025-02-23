@@ -17,9 +17,9 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className="sticky top-0 z-50 flex items-center justify-between px-4 py-2 shadow-md"
+        className="bg-gradient-to-r from-teal-100 via-cyan-200 to-blue-300 sticky top-0 z-50 flex items-center justify-between px-4 py-2 shadow-md"
         style={{
-          background: "#cafdfe",
+          // background: "#cafdfe",
           color: mode === "light" ? "#000" : "#fff",
           transition: "all 0.3s ease",
         }}
