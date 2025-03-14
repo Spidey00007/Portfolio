@@ -3,30 +3,30 @@ import ProjectCard from "./ProjectCard";
 import TOPOLOGY from "vanta/src/vanta.topology";
 
 const Projects = () => {
-  const [topology, setTopology] = useState(null);
+  //   const [topology, setTopology] = useState(null);
 
-  useEffect(() => {
-    if (!topology) {
-      setTopology(
-        TOPOLOGY({
-          el: "#projects",
-          color: 0x1fd1a5,
-          backgroundColor: 0xb3e0dc,
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: false,
-          minHeight: 200.0,
-          minWidth: 200.0,
-          scale: 1.0,
-          scaleMobile: 1.0,
-        })
-      );
-    }
+  //   useEffect(() => {
+  //     if (!topology) {
+  //       setTopology(
+  //         TOPOLOGY({
+  //           el: "#projects",
+  //           color: 0x1fd1a5,
+  //           backgroundColor: 0xb3e0dc,
+  //           mouseControls: true,
+  //           touchControls: true,
+  //           gyroControls: false,
+  //           minHeight: 200.0,
+  //           minWidth: 200.0,
+  //           scale: 1.0,
+  //           scaleMobile: 1.0,
+  //         })
+  //       );
+  //     }
 
-    return () => {
-      if (topology) topology.destroy();
-    };
-  }, [topology]);
+  //     return () => {
+  //       if (topology) topology.destroy();
+  //     };
+  //   }, [topology]);
 
   const projectData = [
     {
@@ -70,7 +70,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-10 text-white relative" id="projects">
+    <div
+      className="py-10 text-white relative"
+      style={{
+        backgroundImage: "url('/bg1.avif')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <h2 className="text-center text-teal-600 text-4xl font-bold mb-8">
         Projects
       </h2>
