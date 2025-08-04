@@ -104,7 +104,7 @@ const Home = () => {
         <div className="mt-6 flex gap-6 flex-wrap justify-center md:justify-start">
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1Mkfm62MBfoQsgpwn0GFRMMdqFMS6oL53/view"
+            href="https://drive.google.com/file/d/1l6Acxu_SRtHCr26GqZvMoRGLUB23-I0F/view"
             className="bg-indigo-600 text-white px-6 py-3 rounded-full text-lg font-semibold shadow-lg transform transition-all duration-300 hover:scale-105 hover:bg-indigo-500 hover:shadow-xl hover:rotate-1 flex items-center gap-2"
           >
             Resume
