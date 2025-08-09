@@ -49,7 +49,7 @@ const Footer = () => {
             className="transition-transform transform hover:scale-110"
           >
             <img
-              src="img/userAsset/gmail.svg"
+              src="img/userAsset/mail.png"
               alt="Email"
               className="w-8 h-8"
             />
@@ -61,6 +61,16 @@ const Footer = () => {
             <img
               src="img/userAsset/leetcode.png"
               alt="Leetcode"
+              className="w-8 h-8"
+            />
+          </a>
+          <a
+            href="https://monkeytype.com/profile/Spidey77"
+            className="transition-transform transform hover:scale-110"
+          >
+            <img
+              src="https://raw.githubusercontent.com/monkeytype-hub/monkeytype-icon/master/monkeytype-icon/logo-svg/aurora.svg"
+              alt="MonkeyType"
               className="w-8 h-8"
             />
           </a>
