@@ -54,6 +54,16 @@ const Footer = () => {
               className="w-8 h-8"
             />
           </a>
+          <a
+            href="https://leetcode.com/u/Spidey7/"
+            className="transition-transform transform hover:scale-110"
+          >
+            <img
+              src="img/userAsset/leetcode.png"
+              alt="Leetcode"
+              className="w-8 h-8"
+            />
+          </a>
         </div>
 
         {/* Footer Text */}
@@ -71,11 +81,6 @@ const Footer = () => {
             © {new Date().getFullYear()} | All Rights Reserved
           </p>
         </div>
-      </div>
-
-      {/* Bottom Border */}
-      <div className="border-t border-gray-700 mt-6">
-        <p className="pt-10"></p>
       </div>
     </footer>
   );
