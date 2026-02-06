@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme } from "../Store/themeSlice";
+// import { toggleTheme } from "../Store/themeSlice";
 import { FaLaptopCode } from "react-icons/fa";
-import { Sun, Moon } from "react-bootstrap-icons";
+// import { Sun, Moon } from "react-bootstrap-icons";
 import { FaPhone } from "react-icons/fa";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const mode = useSelector((state) => state.theme.mode);
 
   const handleMenuClick = () => {

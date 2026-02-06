@@ -3,11 +3,11 @@ import { useSelector } from "react-redux";
 import { ReactTyped } from "react-typed";
 import { FaLinkedin, FaFileAlt } from "react-icons/fa";
 import "../App.css";
-import DOTS from "vanta/src/vanta.dots";
+// import DOTS from "vanta/src/vanta.dots";
 import WAVES from "vanta/src/vanta.waves";
 
 const Home = () => {
-  const [dots, setDots] = useState(null);
+  // const [dots, setDots] = useState(null);
   const [waves, setWaves] = useState(null);
   const profileWrapperRef = useRef(null);
   const mode = useSelector((state) => state.theme.mode);

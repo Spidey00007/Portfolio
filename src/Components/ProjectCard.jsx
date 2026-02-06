@@ -12,24 +12,26 @@ const ProjectCard = ({
   const cardRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+useEffect(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-    if (cardRef.current) observer.observe(cardRef.current);
+  const currentCard = cardRef.current;
+  if (currentCard) observer.observe(currentCard);
 
-    return () => {
-      if (cardRef.current) observer.disconnect();
-    };
-  }, []);
+  return () => {
+    if (currentCard) observer.unobserve(currentCard);
+  };
+}, []);
+
 
   return (
     <div

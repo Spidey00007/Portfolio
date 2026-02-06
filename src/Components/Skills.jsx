@@ -5,23 +5,25 @@ const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-    if (skillsRef.current) observer.observe(skillsRef.current);
+  const currentSkills = skillsRef.current;
+  if (currentSkills) observer.observe(currentSkills);
 
-    return () => {
-      if (skillsRef.current) observer.disconnect();
-    };
-  }, []);
+  return () => {
+    if (currentSkills) observer.unobserve(currentSkills);
+  };
+}, []);
+
 
   return (
     <div

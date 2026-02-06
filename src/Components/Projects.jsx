@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 import ProjectCard from "./ProjectCard";
-import TOPOLOGY from "vanta/src/vanta.topology";
+// import TOPOLOGY from "vanta/src/vanta.topology";
 
 const Projects = () => {
   //   const [topology, setTopology] = useState(null);
