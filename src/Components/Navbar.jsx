@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 // import { toggleTheme } from "../Store/themeSlice";
 import { FaLaptopCode } from "react-icons/fa";
 // import { Sun, Moon } from "react-bootstrap-icons";

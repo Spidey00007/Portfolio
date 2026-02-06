@@ -19,6 +19,7 @@ const ContactMe = () => {
           action="https://formspree.io/f/myzkzelq"
           method="POST"
           target="_blank"
+          rel="noopener noreferrer"
           className="p-6 rounded-xl shadow-2xl w-full max-w-md mx-auto bg-gradient-to-r from-teal-100 to-green-100 border border-teal-400"
         >
           <div className="mb-4">
